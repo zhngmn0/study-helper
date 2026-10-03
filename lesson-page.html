@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Lesson Screen</title>
+
+<style>
+
+button{
+    margin: 5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Study Helper</h1>
+
+<h2>Pre-Calculus 12</h2>
+
+<h3>Lesson 1</h3>
+
+<p>Lesson Video</p>
+
+<img src="https://via.placeholder.com/300x150">
+
+<p>Lesson Notes</p>
+
+<p>
+Reflection flips the graph.<br>
+Translation moves the graph.<br>
+Stretch makes the graph bigger.
+</p>
+
+<p>Ask a Question</p>
+
+<input type="text">
+
+<br><br>
+
+<a href="index.html">
+<button>Previous</button>
+</a>
+
+<button>Next</button>
+
+<button onclick="showQuestion()">Practice</button>
+
+<p id="practice"></p>
+
+<script>
+
+function showQuestion() {
+
+    document.getElementById("practice").innerHTML =
+    "Practice: What does a reflection do to a graph?";
+
+}
+
+</script>
+
+</body>
+
+</html>

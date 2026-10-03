@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Progress Screen</title>
+</head>
+
+<body>
+
+<h1>Study Helper</h1>
+
+<h2>Progress Screen</h2>
+
+<p>Pre-Calculus 12 Progress</p>
+
+<p id="progressText">Progress: 60%</p>
+
+<progress id="bar" value="60" max="100"></progress>
+
+<h3>Completed Lessons</h3>
+
+<p>Lesson 1: Transformations - Completed</p>
+<p>Lesson 2: Reflections - Completed</p>
+<p>Lesson 3: Stretches - Not Completed</p>
+
+<p id="message">Good job! Keep learning.</p>
+
+<br>
+
+<button onclick="finishLesson()">Finish Lesson</button>
+
+<br><br>
+
+<a href="index.html">
+<button>Back to Home</button>
+</a>
+
+<button>Review Lesson</button>
+
+<script>
+
+function finishLesson() {
+
+    document.getElementById("bar").value = 100;
+
+    document.getElementById("progressText").innerHTML = "Progress: 100%";
+
+    document.getElementById("message").innerHTML = "Congratulations! You finished the lesson!";
+
+}
+
+</script>
+
+</body>
+</html>

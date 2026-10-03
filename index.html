@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Home Screen</title>
+
+<style>
+
+.math {
+    background-color: rgb(255, 99, 71);
+    color: white;
+    border: none;
+    height: 36px;
+    width: 120px;
+    border-radius: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.science {
+    background-color: rgb(60, 179, 113);
+    color: white;
+    border: none;
+    height: 36px;
+    width: 120px;
+    border-radius: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.history {
+    background-color: rgb(70, 130, 180);
+    color: white;
+    border: none;
+    height: 36px;
+    width: 120px;
+    border-radius: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="topnav">
+    <a class="active" href="index.html">Home</a>
+    <a href="progress-page.html" target="_blank">Progress</a>
+    <a href="contact.html">Contact</a>
+    <input type="text" placeholder="Search..">
+</div>
+
+<h1>Study Helper</h1>
+
+<p>
+Welcome to the Study Helper! This tool is designed to assist you in organizing your study sessions, tracking your progress, and providing resources to enhance your learning experience.
+</p>
+
+<p>Select your courses and get started!</p>
+
+<a href="lesson-page.html" target="_blank">
+    <button class="math" onclick="changeColor(this)">Pre-Calculus 12</button>
+</a>
+
+<br>
+
+<button class="science" onclick="changeColor(this)">Chemistry 11</button>
+
+<br>
+
+<button class="history" onclick="changeColor(this)">Social Studies 11</button>
+
+<script>
+
+function changeColor(button) {
+    button.style.backgroundColor = "orange";
+}
+
+</script>
+
+</body>
+
+</html>
