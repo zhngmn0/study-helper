@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
@@ -8,8 +7,25 @@
 
 <style>
 
-button{
+body {
+    font-family: Arial;
+    margin: 30px;
+}
+
+button {
     margin: 5px;
+    padding: 8px;
+}
+
+input {
+    padding: 6px;
+    width: 300px;
+}
+
+.lesson {
+    border: 1px solid black;
+    padding: 15px;
+    width: 500px;
 }
 
 </style>
@@ -20,44 +36,84 @@ button{
 
 <h1>Study Helper</h1>
 
+<a href="index.html">Home</a>
+<a href="progress-page.html">Progress</a>
+<a href="contact.html">Contact</a>
+
+<hr>
+
 <h2>Pre-Calculus 12</h2>
 
-<h3>Lesson 1</h3>
+<h3>Lesson 1: Transformations of Functions</h3>
 
-<p>Lesson Video</p>
+<div class="lesson">
 
-<img src="https://via.placeholder.com/300x150">
+<h3>Lesson Video</h3>
 
-<p>Lesson Notes</p>
+<div style="width:300px; height:150px; background-color:lightgray; text-align:center; line-height:150px;">
+    Video Placeholder
+</div>
+
+<h3>Lesson Notes</h3>
 
 <p>
-Reflection flips the graph.<br>
-Translation moves the graph.<br>
-Stretch makes the graph bigger.
+Reflection flips the graph.<br><br>
+
+Translation moves the graph left, right, up, or down.<br><br>
+
+Stretch makes the graph taller or wider.
 </p>
 
-<p>Ask a Question</p>
+<h3>Ask a Question</h3>
 
-<input type="text">
+<input type="text" id="question" placeholder="Type your question here">
 
-<br><br>
+<button onclick="askQuestion()">Ask</button>
+
+<p id="answer"></p>
+
+<h3>Practice</h3>
+
+<button onclick="showQuestion()">Start Practice</button>
+
+<p id="practice"></p>
+
+</div>
+
+<br>
 
 <a href="index.html">
 <button>Previous</button>
 </a>
 
-<button>Next</button>
-
-<button onclick="showQuestion()">Practice</button>
-
-<p id="practice"></p>
+<button onclick="nextLesson()">Next Lesson</button>
 
 <script>
+
+function askQuestion() {
+
+    var question = document.getElementById("question").value;
+
+    if (question == "") {
+        document.getElementById("answer").innerHTML =
+        "Please enter a question.";
+    } else {
+        document.getElementById("answer").innerHTML =
+        "Your question has been submitted.";
+    }
+
+}
 
 function showQuestion() {
 
     document.getElementById("practice").innerHTML =
-    "Practice: What does a reflection do to a graph?";
+    "Practice Question: What does a reflection do to a graph?";
+
+}
+
+function nextLesson() {
+
+    alert("Lesson 2 is coming soon!");
 
 }
 
