@@ -7,6 +7,23 @@
 
 <style>
 
+body {
+    font-family: Arial;
+    margin: 30px;
+}
+
+.topnav {
+    margin-bottom: 20px;
+}
+
+.topnav a {
+    margin-right: 15px;
+}
+
+.topnav input {
+    padding: 5px;
+}
+
 .math {
     background-color: rgb(255, 99, 71);
     color: white;
@@ -51,36 +68,82 @@
 <body>
 
 <div class="topnav">
-    <a class="active" href="index.html">Home</a>
-    <a href="progress-page.html" target="_blank">Progress</a>
+
+    <a href="index.html">Home</a>
+    <a href="progress-page.html">Progress</a>
     <a href="contact.html">Contact</a>
-    <input type="text" placeholder="Search..">
+
+    <input type="text" id="search" placeholder="Search courses...">
+
+    <button onclick="searchCourse()">Search</button>
+
 </div>
 
 <h1>Study Helper</h1>
 
 <p>
-Welcome to the Study Helper! This tool is designed to assist you in organizing your study sessions, tracking your progress, and providing resources to enhance your learning experience.
+Welcome to the Study Helper! This tool is designed to assist you in organizing
+your study sessions, tracking your progress, and providing resources to
+enhance your learning experience.
 </p>
 
-<p>Select your courses and get started!</p>
+<p>Select your course and get started!</p>
 
-<a href="lesson-page.html" target="_blank">
-    <button class="math" onclick="changeColor(this)">Pre-Calculus 12</button>
+<a href="lesson-page.html">
+    <button class="math">Pre-Calculus 12</button>
 </a>
 
 <br>
 
-<button class="science" onclick="changeColor(this)">Chemistry 11</button>
+<button class="science" onclick="comingSoon()">
+    Chemistry 11
+</button>
 
 <br>
 
-<button class="history" onclick="changeColor(this)">Social Studies 11</button>
+<button class="history" onclick="comingSoon()">
+    Social Studies 11
+</button>
+
+<p id="message"></p>
+
 
 <script>
 
-function changeColor(button) {
-    button.style.backgroundColor = "orange";
+function searchCourse() {
+
+    var search = document.getElementById("search").value.toLowerCase();
+
+    if (search.includes("pre") || search.includes("math")) {
+
+        document.getElementById("message").innerHTML =
+        "Pre-Calculus 12 is available.";
+
+    } else if (search.includes("chem")) {
+
+        document.getElementById("message").innerHTML =
+        "Chemistry 11 is coming soon.";
+
+    } else if (search.includes("social") || search.includes("history")) {
+
+        document.getElementById("message").innerHTML =
+        "Social Studies 11 is coming soon.";
+
+    } else {
+
+        document.getElementById("message").innerHTML =
+        "Course not found.";
+
+    }
+
+}
+
+
+function comingSoon() {
+
+    document.getElementById("message").innerHTML =
+    "This course is coming soon!";
+
 }
 
 </script>
