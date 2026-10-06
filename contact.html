@@ -2,30 +2,52 @@
 <html>
 
 <head>
+
     <title>Contact - Study Helper</title>
 
     <style>
+
+        body {
+            font-family: Arial;
+            margin: 30px;
+        }
+
+        .topnav {
+            margin-bottom: 20px;
+        }
+
+        .topnav a {
+            margin-right: 15px;
+        }
+
         button {
             margin: 5px;
+            padding: 8px;
         }
 
         input {
             margin-bottom: 10px;
+            padding: 5px;
         }
 
         textarea {
             margin-bottom: 10px;
+            padding: 5px;
         }
+
     </style>
+
 </head>
 
 <body>
 
-    <h1>Study Helper</h1>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="progress-page.html">Progress</a>
+        <a href="contact.html">Contact</a>
+    </div>
 
-    <a href="index.html">Home</a>
-    <a href="progress-page.html">Progress</a>
-    <a href="contact.html">Contact</a>
+    <h1>Study Helper</h1>
 
     <h2>Contact Us</h2>
 
@@ -49,11 +71,29 @@
 
     <p id="response"></p>
 
+
     <script>
+
         function sendMessage() {
-            document.getElementById("response").innerHTML =
-            "Thank you! Your message has been submitted.";
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            if (name == "" || email == "" || message == "") {
+
+                document.getElementById("response").innerHTML =
+                "Please fill in all fields.";
+
+            } else {
+
+                document.getElementById("response").innerHTML =
+                "Thank you! Your message has been submitted.";
+
+            }
+
         }
+
     </script>
 
 </body>
