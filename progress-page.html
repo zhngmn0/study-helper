@@ -2,16 +2,51 @@
 <html>
 
 <head>
+
 <title>Progress Screen</title>
+
+<style>
+
+body {
+    font-family: Arial;
+    margin: 30px;
+}
+
+.topnav {
+    margin-bottom: 20px;
+}
+
+.topnav a {
+    margin-right: 15px;
+}
+
+button {
+    margin: 5px;
+    padding: 8px;
+}
+
+progress {
+    width: 300px;
+    height: 25px;
+}
+
+</style>
+
 </head>
 
 <body>
 
+<div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="progress-page.html">Progress</a>
+    <a href="contact.html">Contact</a>
+</div>
+
 <h1>Study Helper</h1>
 
-<h2>Progress Screen</h2>
+<h2>My Progress</h2>
 
-<p>Pre-Calculus 12 Progress</p>
+<h3>Pre-Calculus 12</h3>
 
 <p id="progressText">Progress: 60%</p>
 
@@ -19,23 +54,24 @@
 
 <h3>Completed Lessons</h3>
 
-<p>Lesson 1: Transformations - Completed</p>
-<p>Lesson 2: Reflections - Completed</p>
-<p>Lesson 3: Stretches - Not Completed</p>
+<p>Lesson 1: Transformations - Completed ✓</p>
+<p>Lesson 2: Reflections - Completed ✓</p>
+<p id="lesson3">Lesson 3: Stretches - Not Completed</p>
 
 <p id="message">Good job! Keep learning.</p>
 
-<br>
-
 <button onclick="finishLesson()">Finish Lesson</button>
+
+<a href="lesson-page.html">
+    <button>Review Lesson</button>
+</a>
 
 <br><br>
 
 <a href="index.html">
-<button>Back to Home</button>
+    <button>Back to Home</button>
 </a>
 
-<button>Review Lesson</button>
 
 <script>
 
@@ -43,13 +79,19 @@ function finishLesson() {
 
     document.getElementById("bar").value = 100;
 
-    document.getElementById("progressText").innerHTML = "Progress: 100%";
+    document.getElementById("progressText").innerHTML =
+    "Progress: 100%";
 
-    document.getElementById("message").innerHTML = "Congratulations! You finished the lesson!";
+    document.getElementById("lesson3").innerHTML =
+    "Lesson 3: Stretches - Completed ✓";
+
+    document.getElementById("message").innerHTML =
+    "Congratulations! You completed all lessons!";
 
 }
 
 </script>
 
 </body>
+
 </html>
